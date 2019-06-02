@@ -32,7 +32,7 @@ app.listen(port, () => {
 // render
 // ---------------------------------------------
 export async function render(ctx: RouterContext, initialState: InitialState): Promise<string> {
-  const stats: object = require('loadable-stats.json');
+  const stats: object = require('@loadable/stats.json');
   const extractor: ChunkExtractor = new ChunkExtractor({stats, entrypoints: 'app'});
   
   const body: string = renderToString((
