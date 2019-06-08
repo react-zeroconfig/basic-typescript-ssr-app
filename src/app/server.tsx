@@ -6,7 +6,7 @@ import { renderToString } from 'react-dom/server';
 import { App } from './app';
 import { InitialState } from './data/initialState';
 
-const port: number = Number(process.env.PORT || process.env.SERVER_PORT || 4100);
+const port: number = Number(process.env.SERVER_PORT || 4100);
 
 const app: Koa = new Koa();
 const router: Router = new Router();
