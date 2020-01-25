@@ -54,7 +54,10 @@ Add NginX server config
 
 ## Jest 
 <!-- import src/__tests__/*.{js,jsx,ts,tsx} --title-tag h3 -->
-<h3>src/__tests__/e2e.ts</h3>
+
+### src/\_\_tests\_\_/e2e.ts
+
+
 ```ts
 import puppeteer, { Browser, Page } from 'puppeteer';
 
@@ -72,7 +75,11 @@ describe('E2E Sample', () => {
   });
 });
 ```
-<h3>src/__tests__/sample.ts</h3>
+
+
+### src/\_\_tests\_\_/sample.ts
+
+
 ```ts
 describe('Sample', () => {
   test('Test', () => {
@@ -80,6 +87,7 @@ describe('Sample', () => {
   });
 });
 ```
+
 <!-- importend -->
 
 <!-- import src/**/*.test.{js,jsx,ts,tsx} --title-tag h3 -->
@@ -87,7 +95,10 @@ describe('Sample', () => {
 
 ## Storybook
 <!-- import src/**/*.stories.{js,jsx,ts,tsx} --title-tag h3 -->
-<h3>src/app/components/Title.stories.tsx</h3>
+
+### src/app/components/Title.stories.tsx
+
+
 ```tsx
 import { storiesOf } from '@storybook/react';
 import React from 'react';
@@ -101,4 +112,5 @@ storiesOf('Title', module)
     <Title text="World?"/>
   ));
 ```
+
 <!-- importend -->
