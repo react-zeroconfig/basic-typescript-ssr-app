@@ -33,14 +33,14 @@ app.listen(port, () => {
 // ---------------------------------------------
 export async function render(ctx: RouterContext, initialState: InitialState): Promise<string> {
   const stats: object = require('@loadable/stats.json');
-  const extractor: ChunkExtractor = new ChunkExtractor({stats, entrypoints: 'app'});
-  
-  const body: string = renderToString((
+  const extractor: ChunkExtractor = new ChunkExtractor({ stats, entrypoints: 'app' });
+
+  const body: string = renderToString(
     <ChunkExtractorManager extractor={extractor}>
-      <App initialState={initialState}/>
-    </ChunkExtractorManager>
-  ));
-  
+      <App initialState={initialState} />
+    </ChunkExtractorManager>,
+  );
+
   return template({
     body,
     initialState: JSON.stringify(initialState),
@@ -51,7 +51,11 @@ export async function render(ctx: RouterContext, initialState: InitialState): Pr
 // ---------------------------------------------
 // template
 // ---------------------------------------------
-export const template: (params: {body: string, initialState: string, extractor: ChunkExtractor}) => string = ({body, initialState, extractor}) => `
+export const template: (params: { body: string; initialState: string; extractor: ChunkExtractor }) => string = ({
+  body,
+  initialState,
+  extractor,
+}) => `
 <!DOCTYPE html>
 <html lang="en">
   <head>
